@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="lobbypane" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.LobbyController">
+    <children>
+        <Pane layoutX="-1.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #765D67; -fx-background-radius: 10;">
+            <effect>
+                <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+            </effect>
+            <ImageView fx:id="Background" fitHeight="300.0" fitWidth="372.0" layoutX="272.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@Background.png" />
+                </image>
+            </ImageView>
+            <ImageView fx:id="Sakura" fitHeight="300.0" fitWidth="460.0" layoutX="149.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@Sakura.png" />
+                </image>
+            </ImageView>
+            <Label fx:id="helloLabel" layoutX="52.0" layoutY="14.0" text="Hello, Kyro" textFill="#fadcd5">
+                <font>
+                    <Font name="System Bold" size="24.0" />
+                </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="49.0" text="Leaderboards" textFill="#fadcd5">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Label>
+            <TextArea fx:id="LeaderboardTextArea" layoutX="51.0" layoutY="72.0" prefHeight="128.0" prefWidth="372.0" editable="false" />
+            <Button fx:id="startGameButton" layoutX="52.0" layoutY="217.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="134.0" onAction="#statGameButton" style="-fx-background-color: #2D222F; -fx-background-radius: 10;" text="Start Game" textFill="#fadcd5">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+                <effect>
+                    <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+                </effect>
+            </Button>
+        </Pane>
+    </children>
+</AnchorPane>

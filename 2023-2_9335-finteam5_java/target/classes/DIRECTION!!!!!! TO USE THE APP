@@ -1,0 +1,6 @@
+!Before you start using the app use this commands first to start the app
+
+1.go to your terminal and navigate to the server directory : \IdeaProjects\2023-2_9335-finteam5\src\main\java\server\runner>
+2.use this command to summon the orb demon: [start orbd -10050 -localhost]
+3.use this to run the server: [start java Server_Java.BoggleServer -10050 -localhost] or press the run button
+4.For the client you can just press the run button build in your idea

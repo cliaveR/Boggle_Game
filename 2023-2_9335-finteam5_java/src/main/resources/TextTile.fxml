@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.TextTile">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+         <children>
+            <Text fx:id="randomLetter" layoutX="25.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+   </effect>
+</AnchorPane>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #765D67;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.LoginController">
+    <children>
+        <Pane fx:id="loginPane" prefHeight="300.0" prefWidth="600.0">
+            <effect>
+                <DropShadow color="#32323270" offsetX="2.0" offsetY="2.0" />
+            </effect>
+            <children>
+                <ImageView fx:id="Background" fitHeight="300.0" fitWidth="372.0" layoutX="264.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Background.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="Sakura" fitHeight="300.0" fitWidth="460.0" layoutX="169.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Sakura.png" />
+                    </image>
+                </ImageView>
+                <PasswordField fx:id="UserPassword" layoutX="48.0" layoutY="157.0" prefHeight="39.0" prefWidth="384.0" promptText="Enter Password" style="-fx-background-radius: 10;">
+                    <effect>
+                        <DropShadow color="#32323270" offsetX="2.0" offsetY="2.0" />
+                    </effect>
+                </PasswordField>
+                <Text fx:id="LoginLabel" fill="#fadcd5" layoutX="47.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="Username" layoutX="48.0" layoutY="79.0" prefHeight="39.0" prefWidth="384.0" promptText="Enter Username" style="-fx-background-radius: 10;">
+                    <effect>
+                        <DropShadow color="#32323270" offsetX="2.0" offsetY="2.0" />
+                    </effect>
+                </TextField>
+                    <Button fx:id="LoginButton" layoutX="48.0" layoutY="227.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="49.0" prefWidth="167.0" text="Login" textFill="#fadcd5">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <style>
+                        -fx-background-color: #2D222F;
+                        -fx-background-radius: 10;
+                    </style>
+                    <effect>
+                        <DropShadow color="#32323270" offsetX="2.0" offsetY="2.0" />
+                    </effect>
+                </Button>
+                <Text fx:id="usernameLabel" fill="#fadcd5" layoutX="47.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="passwordLabel" fill="#fadcd5" layoutX="49.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+            <Label fx:id="invalidUsername" layoutX="49.0" layoutY="118.0" styleClass="lexend-deca-regular" textFill="RED" />
+            <Label fx:id="invalidPassword" layoutX="49.0" layoutY="196.0" styleClass="lexend-deca-regular" textFill="RED" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

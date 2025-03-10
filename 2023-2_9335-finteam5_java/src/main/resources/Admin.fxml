@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="AdminAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.controllers.AdminController">
+   <children>
+      <Pane fx:id="AdminPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="730.0" style="-fx-background-color: #765D67;">
+         <children>
+            <ImageView fitHeight="351.0" fitWidth="443.0" layoutX="347.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Sakura.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="758.0" fitWidth="967.0" layoutX="-13.0" layoutY="-114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@BackgroundGroup.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="applySettingsButton" layoutX="392.0" layoutY="110.0" mnemonicParsing="false" onAction="#applyNewSettings" prefHeight="51.0" prefWidth="160.0" text="Apply Settings" textFill="#fadcd5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+               <style>
+                  -fx-background-color: #2D222F;
+                  -fx-background-radius: 10;
+               </style>
+            </Button>
+
+            <Button fx:id="createPlayerButton" layoutX="395.0" layoutY="198.0" mnemonicParsing="false" onAction="#createPlayerButton" prefHeight="51.0" prefWidth="160.0" text="Create Player" textFill="#fadcd5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+               <style>
+                  -fx-background-color: #2D222F;
+                  -fx-background-radius: 10;
+               </style>
+            </Button>
+
+
+            <Button fx:id="searchButton" layoutX="396.0" layoutY="284.0" mnemonicParsing="false" onAction="#searchPlayer" prefHeight="51.0" prefWidth="160.0" text="Search" textFill="#fadcd5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+               <style>
+                  -fx-background-color: #2D222F;
+                  -fx-background-radius: 10;
+               </style>
+            </Button>
+
+            <TextField fx:id="roundTimer" layoutX="45.0" layoutY="110.0" prefHeight="51.0" prefWidth="160.0" promptText="Enter Waiting Time" style="-fx-background-radius: 10;">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="waitingTimer" layoutX="221.0" layoutY="110.0" prefHeight="51.0" prefWidth="160.0" promptText="Enter Round Timer" style="-fx-background-radius: 10;">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="newPlayerUsername" layoutX="48.0" layoutY="198.0" prefHeight="51.0" prefWidth="160.0" promptText="Enter Username" style="-fx-background-radius: 10;">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="newPlayerPassword" layoutX="224.0" layoutY="198.0" prefHeight="51.0" prefWidth="160.0" promptText="Enter Password" style="-fx-background-radius: 10;">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <TextField fx:id="searchBar" layoutX="47.0" layoutY="284.0" prefHeight="51.0" prefWidth="329.0" promptText="Search Player" style="-fx-background-radius: 10;">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </TextField>
+            <ListView id="playerListTextfield" fx:id="playerList" layoutX="575.0" layoutY="111.0" prefHeight="224.0" prefWidth="128.0" style="-fx-background-radius: 10;">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+            </ListView>
+            <Text fill="#fadcd5" layoutX="50.0" layoutY="106.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.1" text="Waiting Timer">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#fadcd5" layoutX="221.0" layoutY="106.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.1" text="Round Timer">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#fadcd5" layoutX="52.0" layoutY="195.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.3" text="Username">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#fadcd5" layoutX="225.0" layoutY="195.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.1" text="Password">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#fadcd5" layoutX="59.0" layoutY="278.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.3" text="Search Player">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#fadcd5" layoutX="575.0" layoutY="101.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.3" text="Player List">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#fadcd5" layoutX="43.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN">
+               <font>
+                  <Font name="System Bold" size="54.0" />
+               </font>
+            </Text>
+            <Label fx:id="roundTimerError" layoutX="222.0" layoutY="161.0" prefHeight="17.0" prefWidth="236.0" style="-fx-stroke: #000000; -fx-stroke-width: 0.5;" textFill="RED" />
+            <Label fx:id="usernameError" layoutX="52.0" layoutY="249.0" prefHeight="17.0" prefWidth="46.0" style="-fx-stroke: #000000; -fx-stroke-width: 0.5;" textFill="RED" />
+            <Label fx:id="passwordError" layoutX="232.0" layoutY="250.0" prefHeight="17.0" prefWidth="196.0" style="-fx-stroke: #000000; -fx-stroke-width: 0.5;" textFill="RED" />
+            <Label fx:id="searchPlayerError" layoutX="49.0" layoutY="347.0" prefHeight="17.0" prefWidth="261.0" style="-fx-stroke: #000000; -fx-stroke-width: 0.5;" textFill="RED" />
+            <Label fx:id="successfulSettingsChange" layoutX="49.0" layoutY="161.0" prefHeight="17.0" prefWidth="316.0" style="-fx-stroke: #000000; -fx-stroke-width: 0.5;" textFill="BLACK" />
+            <Label fx:id="successfulPlayerCreation" layoutX="53.0" layoutY="250.0" prefHeight="17.0" prefWidth="378.0" style="-fx-stroke: #000000; -fx-stroke-width: 0.5;" textFill="WHITE" />
+            <Label fx:id="waitingTimerError" layoutX="49.0" layoutY="161.0" textFill="RED" />
+            <Text fill="#fadcd5" layoutX="48.0" layoutY="401.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.3" text="Player Information">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Text>
+            <Button id="editButton" fx:id="editButton" layoutX="316.0" layoutY="371.0" mnemonicParsing="false" onAction="#editPlayerInformation" prefHeight="37.0" prefWidth="66.0" style="-fx-background-color: #2D222F; -fx-background-radius: 10;" text="Edit" textFill="#fadcd5">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button id="saveButton" fx:id="saveButton" layoutX="397.0" layoutY="371.0" mnemonicParsing="false" onAction="#savePlayerInformation" prefHeight="37.0" prefWidth="66.0" style="-fx-background-color: #2D222F; -fx-background-radius: 10;" text="Save" textFill="#fadcd5">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TextField id="playerInformationUsername" fx:id="searchedUsername" layoutX="49.0" layoutY="431.0" prefHeight="37.0" prefWidth="268.0" promptText="Search a Player First" style="-fx-background-radius: 10;" />
+            <TextField id="playerPassword" fx:id="searchedPassword" layoutX="49.0" layoutY="501.0" prefHeight="37.0" prefWidth="268.0" promptText="Search a Player First" style="-fx-background-radius: 10;" />
+            <Label layoutX="43.0" layoutY="406.0" prefHeight="25.0" prefWidth="81.0" text="Username" textFill="#fadcd5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="476.0" text="Password" textFill="#fadcd5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="437.0" text="Total Rounds Won:" textFill="#fadcd5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="507.0" text="Total Points:" textFill="#fadcd5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField id="totalRoundsWon" fx:id="searchedRound" layoutX="505.0" layoutY="431.0" prefHeight="37.0" prefWidth="71.0" promptText="0" style="-fx-background-radius: 10;" />
+            <TextField id="totalPoints" fx:id="searchedPoints" layoutX="505.0" layoutY="501.0" prefHeight="37.0" prefWidth="71.0" promptText="0" style="-fx-background-radius: 10;" />
+            <Button fx:id="deletingButton" layoutX="479.0" layoutY="371.0" mnemonicParsing="false" onAction="#deletePlayer" prefHeight="37.0" prefWidth="94.0" style="-fx-background-color: #2D222F; -fx-background-radius: 10;" text="Delete Player" textFill="#fadcd5">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="editUsernameError" layoutX="45.0" layoutY="468.0" textFill="RED" />
+            <Label fx:id="editPasswordError" layoutX="45.0" layoutY="538.0" textFill="RED" />
+            <Button fx:id="refreshButton" layoutX="637.0" layoutY="38.0" mnemonicParsing="false" onAction="#refreshContent" prefHeight="37.0" prefWidth="66.0" style="-fx-background-color: #2D222F; -fx-background-radius: 10;" text="Refresh" textFill="#fadcd5">
+               <effect>
+                  <DropShadow color="#3a3a3a" offsetX="2.0" offsetY="2.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</AnchorPane>

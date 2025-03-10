@@ -1,0 +1,37 @@
+module BoggleApp
+{
+    struct Player
+    {
+        long pid;
+        string username;
+        long points;
+    };
+
+    typedef sequence<Player> PlayerList;
+    typedef sequence<string> WordList;
+    typedef sequence<char> LetterList;
+
+    exception NoUserFoundException
+    {
+        string message;
+    };
+
+    exception WordNotFoundException
+    {
+        string message;
+    };
+
+    interface PlayerServant
+    {
+    long logInToGame(in string username, in string password) raises (NoUserFoundException);
+    PlayerList getLeaderBoard();
+    long getWaitingTime();
+    long startGame(in long playerID);
+    long getRoundTime(in long gameID);
+    long startRound(in long gameID, in long round);
+    LetterList getLetterSet (in long gameID, in long roundID);
+    boolean checkWord(in string word, in long playerID, in long roundID) raises (WordNotFoundException);
+    string getRoundWinner(in long roundID);
+    string getGameWinner(in long gameID);
+    };
+};
