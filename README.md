@@ -4,7 +4,7 @@
 This project is a multiplayer Boggle game implemented using the fundamentals of Java Sockets and CORBA programming. The game consists of a server-client architecture where players can connect, generate a random Boggle board, and compete to find words within a time limit. Additionally, Python was used for another component of the game to demonstrate interoperability between different programming languages.
 
 ## Technologies Used
-- **Java**: Used for implementing the core server and client logic using Java Sockets.
+- **Java**: Used for implementing the core server and client logic using Java threading.
 - **CORBA (Common Object Request Broker Architecture)**: Enables communication between distributed objects across different platforms.
 - **Python**: Used for another component of the project, showcasing inter-language communication.
 
