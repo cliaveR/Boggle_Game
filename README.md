@@ -45,7 +45,7 @@ python boggle_python.py
 - 📖 Enhance word validation with an external dictionary API.
 
 ## Contributors
-👤 **[Your Name]** - Developer
+👤 **Rold** - Developer
 
 ## License
 📜 This project is licensed under the MIT License.
